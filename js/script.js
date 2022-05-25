@@ -1,3 +1,12 @@
+const rockbutton = document.getElementById("Rock");
+const paperbutton = document.getElementById("Paper");
+const scissorsbutton = document.getElementById("Scissors");
+const buttons = document.querySelectorAll('button');
+
+rockbutton.addEventListener('click',)
+
+
+
 /*Random Rock-Paper-Scissor generator on behalf of Computer
 generate random number from 0 to 2, use them as an index for array,
 resulting in random Rock-Paper-Scissors output*/
@@ -8,7 +17,7 @@ function computerPlay() {
 }
 
 
-//for standardizing user input: Rock Paper Scissors
+//for standardizing user input as: Rock Paper Scissors
 function capitalize(str) {
     
     let capped = str[0].toUpperCase()+str.slice(1).toLowerCase();
@@ -18,6 +27,8 @@ function capitalize(str) {
 
 
 function playRound (playerSelection, computerSelection) {
+    
+    computerSelection = computerPlay();
     const playa = capitalize(playerSelection); //same for rock, RocK, rOCK etc
     if (playa == computerSelection) {
         return 'Nobody Wins, Try Again'
@@ -32,7 +43,7 @@ function playRound (playerSelection, computerSelection) {
   }
 
 
-//writing game() function for a 5-round game of Rock-Paper-Scissors
+/*//writing game() function for a 5-round game of Rock-Paper-Scissors
 function game() {
     let WinRecord = 0; //for recording who wins, Player wins if -ve, computer wins if +ve
     let result;
@@ -61,3 +72,5 @@ function game() {
         console.log('Nobody Wins, Try Again');
     }
 }
+*/
+
